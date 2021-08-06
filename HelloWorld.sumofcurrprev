@@ -1,0 +1,71 @@
+/*
+Replace every array element by multiplication of previous and next
+
+Given an array of integers, update every element with multiplication of previous and next elements with following exceptions. 
+a) First element is replaced by multiplication of first and second. 
+b) Last element is replaced by multiplication of last and second last.
+
+Example:  
+
+Input: arr[] = {2, 3, 4, 5, 6}
+Output: arr[] = {6, 8, 15, 24, 30}
+
+// We get the above output using following
+// arr[] = {2*3, 2*4, 3*5, 4*6, 5*6} 
+*/
+
+import java.util.*;
+public class HelloWorld{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        	// your code goes here
+		int[] arr = {2,3,4,5,6};
+		int n =arr.length;
+		for(int i=0;i<n;i++)
+		System.out.print(arr[i]+"\t");
+		System.out.println();
+		//xyz a1 = new xyz();
+		//int x =xyz.rotateandsum(arr,n);
+	//	System.out.println();
+	//System.out.println("sum is "+x);
+	xyz.sumofcurrprev(arr,n);
+	
+	
+     }
+	static class xyz {
+	     static void sumofcurrprev(int[] arr,int n)
+	    {
+	        int temp =0;
+	        int prev=1;
+	        int curr=0,next=0;
+	        System.out.println("m1");
+	        for(int i=0;i<n-1;i++)
+	        {
+	            
+	            curr=arr[i];
+	            next=arr[i+1];
+	            if(prev==1||next==1)
+	            {
+	                arr[i]=curr*next;
+	                prev=curr;
+	            }
+	            else
+	            {
+	            arr[i]=prev*next;
+	            prev=curr;
+	                
+	            }
+	            
+	        }
+	        arr[n-1]=curr*next;
+	        for(int i=0;i<n;i++)
+	        {
+	           System.out.print(arr[i]+"\t");
+	        }
+	        System.out.println();
+	    }
+	    
+	} 
+
+}//end of class
