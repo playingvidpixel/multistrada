@@ -1,0 +1,29 @@
+/* get the initials of a name*/
+public class getInitials{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        String s1 = new String("ashish Kumar");
+        classdemo.checkInclusion(s1);
+     }
+        static class classdemo{
+    static void checkInclusion(String s1) {
+        int len = s1.length();
+        System.out.print(len);
+        char[] ch = new char[len];
+        
+        //char[] ch = new char[len];
+        char temp,temp1;
+            System.out.println("initials are "+Character.toUpperCase(s1.charAt(0)));
+        for(int j =0;j<len;j++)
+        {
+            
+          if(s1.charAt(j)==' ')
+          System.out.println("initials are "+s1.charAt(j+1));
+        }
+          
+        }
+
+     }
+        
+}
