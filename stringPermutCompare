@@ -1,0 +1,33 @@
+/* this code checks for a permutation of s1 in s2*/
+public class stringPermutCompare{
+
+     public static void main(String []args){
+        System.out.println("Hello World");
+        String s1 = "abd";
+        String s2 = "eidbooao";
+        classdemo.checkInclusion(s1,s2);
+     }
+        static class classdemo{
+    static void checkInclusion(String s1, String s2) {
+        char[] arrs1 = s1.toCharArray();
+        char[] arrs2 = s2.toCharArray();
+        int n=arrs1.length;
+        int m=arrs2.length;
+        int count =0;
+        for(int i=0;i<m-1;i++)
+        {
+            if(arrs2[i]==arrs2[i+1])
+                continue;
+            else
+            {
+                for(int j=0;j<n;j++)
+                    if(arrs2[i]==arrs1[j])
+                        count++;
+            }
+        }
+if(count==n)
+System.out.println("success");
+
+     }
+        }
+        }
